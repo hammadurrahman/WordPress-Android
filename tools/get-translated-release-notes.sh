@@ -54,7 +54,7 @@ if [ x"$2" == x ]; then
   echo Example: $0 release_note_35 release_note_footer
   exit 1
 fi
-
+    code=$(echo $line|cut -d "," -f1|tr -d " ")
 fetch
 extract_release_notes $1 $2
 echo Generated file:
